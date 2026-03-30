@@ -1,4 +1,6 @@
 import Image from "next/image"
+import logo from "@/app/assets/logo.png"
+import denisse from "@/app/assets/denisse.png"
 export default function Header(){
     return(
    <header className="header-enter absolute z-50 w-full rounded-full top-6
@@ -7,7 +9,7 @@ export default function Header(){
         <div className="grid grid-cols-3 items-center">
             <section>
                 <Image
-                src="/imgs/logo.png"
+                src={logo}
                 width={80}
                 height={80}
                 alt="Denisse Daugard porfolio image"
@@ -44,10 +46,10 @@ export default function Header(){
             </nav>
             <figure className="flex justify-end items-center mr-4">
                 <Image
-                    src="/portfolio/portfolio_pic_neon.jpg"
+                    src={denisse}
                     alt="Denisse Daugaard Portfolio Picture"
-                    width={60}
-                    height={60}
+                    width={70}
+                    height={70}
                     className="rounded-full"
                 />
             </figure>
