@@ -7,11 +7,11 @@ export default function Header(){
         <div className="grid grid-cols-3 items-center">
             <section>
                 <Image
-                src="/imgs/logo-cyan-no-bg.png"
+                src="/imgs/logo.png"
                 width={80}
                 height={80}
                 alt="Denisse Daugard porfolio image"
-                className="drop-shadow-[0_5px_20px_rgba(59,130,246)] bg-blur white/10" //drop-shadow-[0_5px_20px_rgba(59,130,246)]
+                className="drop-shadow-[0_5px_20px_rgba(59,130,246)] bg-blur white/10"
                 />
             </section>
             <nav className="">
