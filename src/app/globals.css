@@ -8,19 +8,110 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-nunito);
+  --font-space-mono: var(--font-space-mono);
+  --font-roboto-mono: var(--font-roboto-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background:#121210;
+    --foreground: #f1e6e6;
   }
+}
+
+html {
+  scroll-behavior: smooth !important;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+
+@keyframes headerDrop {
+  from {
+    opacity: 0;
+    transform: translateY(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header-enter{
+  opacity: 0;
+  transform: translateY(-60px);
+  animation: headerDrop 0.8s cubic-bezier(0.22, 1, 0.36, 1) 6s forwards;
+}
+
+.content-enter {
+  opacity: 0;
+  transform: translateY(-60px);
+  animation: headerDrop 1s cubic-bezier(0.22, 1, 0.36, 1) 7s forwards;
+}
+
+@keyframes fadeup {
+     0% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+   }
+
+.fadeup {
+  animation: fadeup 1s ease-out 6s forwards;
+}
+
+
+@keyframes footerEnter {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+   }
+
+   .footer-enter{
+    opacity: 0;
+    transform: translateY(60px);
+    animation: footerEnter 1s cubic-bezier(0.22, 1, 0.36, 1) 6s forwards;
+   }
+
+
+   .swiper-wrapper {
+    height:25rem !important; ; 
+   }
+/* arrows container */
+.swiper-button-next,
+.swiper-button-prev {
+  /* background: rgba(214, 211, 211, 0.13) !important; */
+  backdrop-filter: blur(10px);
+  border-radius: 9999px;
+  width: 24px !important;
+  height: 24px !important;
+  padding: 5px;
+  transition: 0.3s;
+}
+
+/* hover effect */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: rgba(236, 72, 153, 0.3);
+  box-shadow: 0 0 15px rgba(236, 72, 153, 0.6);
+}
+
+/* arrow size */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 15px !important;
 }
