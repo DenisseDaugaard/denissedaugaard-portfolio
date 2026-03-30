@@ -5,9 +5,9 @@ export default function Header(){
     p-2 backdrop-blur-md
     bg-[linear-gradient(0deg,rgba(156,86,153,0.44)_0%,rgba(127,156,173,0.49)_100%)]">
         <div className="grid grid-cols-3 items-center">
-            <section className="">
+            <section>
                 <Image
-                src="/logo-cyan-no-bg.png"
+                src="/imgs/logo-cyan-no-bg.png"
                 width={80}
                 height={80}
                 alt="Denisse Daugard porfolio image"
