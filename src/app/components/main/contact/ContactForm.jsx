@@ -1,6 +1,7 @@
 "use client"
 import { handleSubmit } from './action';
 import { useActionState, useEffect } from 'react';
+import  { Toaster } from 'react-hot-toast';
 
 
 export default function ContactForm() {
@@ -16,8 +17,13 @@ export default function ContactForm() {
     success:false,
   };
 
-
    const [state, formAction, isPending] = useActionState(handleSubmit, initialState);
+
+//    useEffect(() => {
+//     if(state?.serverMessage?.error){
+//         toast.success(state.serverMessage.success);
+//     }
+//     }, [state?.serverMessage])
 
     return (
     <>
@@ -70,11 +76,24 @@ export default function ContactForm() {
             </div>
 
     
-              <div className="error submit__error">
+            <div className="error submit__error">
                 {state?.serverMessage?.error && (
-                <p className="text-red-400 mb-4">{state?.serverMessage?.error}</p>
-                )}  
+               <Toaster
+                position="bottom-right"
+                reverseOrder={false}
+                />
+                )} 
+            </div>
 
+            <div className="error submit__error">
+                {state?.serverMessage?.success && (
+               <Toaster
+                position="bottom-right"
+                reverseOrder={false}
+                />
+                )} 
+            </div>
+            
              <button
                 className="bg-cyan-500/50 hover:shadow-md hover:shadow-cyan-500 inline-block px-4 py-2 rounded disabled:opacity-50 disabled:cursor-not-allowed diabled:bg-gray-200 transition"
                 disabled={isPending}
@@ -83,7 +102,6 @@ export default function ContactForm() {
                 {isPending ? "Sending..." : "Send Message"}
             </button>
             
-            </div>
             </form>
         </section>
     </>
