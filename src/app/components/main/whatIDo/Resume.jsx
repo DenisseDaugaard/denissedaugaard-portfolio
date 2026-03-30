@@ -5,7 +5,12 @@ export default function Resume() {
     return(
         <section className="grid grid-cols-2 w-10/12 mx-auto my-10">
             <div className="flex flex-col justify-self-center items-center gap-6">
-                <Image src="/portfolio/cv.png" alt="resume" width={200} height={300} className="rounded-lg shadow-lg brightness-85"/>
+                <Image 
+                src="/portfolio/cv.png" 
+                alt="resume" width={200} 
+                height={300} 
+                unoptimized
+                className="rounded-lg shadow-lg brightness-85"/>
 
                 <div className="flex gap-4 items-center">
                     <a href="/portfolio/Denisse_Daugaard_CV.pdf" download className="bg-sky-500 hover:bg-sky-700 inline-block px-4 py-2 rounded">

@@ -12,6 +12,7 @@ export default function Header(){
                 src={logo}
                 width={80}
                 height={80}
+                unoptimized
                 alt="Denisse Daugard porfolio image"
                 className="drop-shadow-[0_5px_20px_rgba(59,130,246)] bg-blur white/10"
                 />
@@ -50,6 +51,7 @@ export default function Header(){
                     alt="Denisse Daugaard Portfolio Picture"
                     width={70}
                     height={70}
+                    unoptimized
                     className="rounded-full"
                 />
             </figure>
