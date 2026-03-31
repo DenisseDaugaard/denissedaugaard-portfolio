@@ -86,10 +86,8 @@ body {
     transform: translateY(60px);
     animation: footerEnter 1s cubic-bezier(0.22, 1, 0.36, 1) 6s forwards;
    }
-
-
    .swiper-wrapper {
-    height:25rem !important; ; 
+    height: 100% !important; 
    }
 /* arrows container */
 .swiper-button-next,
@@ -115,3 +113,4 @@ body {
 .swiper-button-prev::after {
   font-size: 15px !important;
 }
+

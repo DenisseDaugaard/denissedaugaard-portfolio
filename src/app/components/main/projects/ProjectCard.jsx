@@ -16,7 +16,7 @@ export default function ProjectCard() {
         <Link href={`${project.href}`} 
         target="_blank"
         rel="noopener noreferrer" 
-        className="inline-block rounded-2xl overflow-hidden shadow-lg bg-white/20 backdrop-blur-xl border border-pink-500/50 h-[18rem] p-6 hover:scale-105 transition-transform">
+        className="inline-block rounded-2xl overflow-hidden shadow-lg bg-white/20 backdrop-blur-xl border border-pink-500/50 lg:h-[18rem] p-6 hover:scale-105 transition-transform">
           <div className="flex items-center justify-between gap-4 mb-6">
             <h2 className="text-2xl font-semibold text-red-400">{project.title}</h2>
              <Image    

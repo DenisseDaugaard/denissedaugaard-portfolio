@@ -3,7 +3,7 @@ export default function HeroVideo({children, poinerEvents}) {
   return (
     <div className={`h-[13rem] w-full overflow-hidden ${poinerEvents}`}>
       <video
-        className="absolute inset-0 h-full w-full object-cover"
+        className="absolute inset-0 lg:h-full w-full object-cover"
         autoPlay
         muted
         loop

@@ -28,7 +28,7 @@ export default function ContactForm() {
     return (
     <>
     
-        <section id="contact"  className="p-6 border border-pink-500/50 rounded-[2rem] backdrop-blur-2xl w-[70%] z-100 my-20 mx-auto">
+        <section id="contact"  className="p-6 mb-15 lg:border border-pink-500/50 lg:rounded-[2rem] backdrop-blur-2xl lg:w-[70%] z-100 lg:my-20 lg:mx-auto">
         <h1 className="text-2xl font-semibold text-center my-8 text-red-400">Contact Me</h1>
             <form noValidate className="flex flex-col gap-4 justify-self-center w-[80%]" action={formAction}>
             <div className="flex flex-col gap-2">
