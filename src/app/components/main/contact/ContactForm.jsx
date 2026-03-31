@@ -1,7 +1,8 @@
 "use client"
 import { handleSubmit } from './action';
-import { useActionState, useEffect } from 'react';
+import { useActionState} from 'react';
 import  { Toaster } from 'react-hot-toast';
+import RevealOnScroll from '../projects/RevealOnScroll';
 
 
 export default function ContactForm() {
@@ -30,6 +31,7 @@ export default function ContactForm() {
     
         <section id="contact"  className="p-6 mb-15 lg:border border-pink-500/50 lg:rounded-[2rem] backdrop-blur-2xl lg:w-[70%] z-100 lg:my-20 lg:mx-auto">
         <h1 className="text-2xl font-semibold text-center my-8 text-red-400">Contact Me</h1>
+        <RevealOnScroll delay={0.2}>
             <form noValidate className="flex flex-col gap-4 justify-self-center w-[80%]" action={formAction}>
             <div className="flex flex-col gap-2">
                 <label htmlFor="name">Full name 
@@ -103,6 +105,7 @@ export default function ContactForm() {
             </button>
             
             </form>
+        </RevealOnScroll>
         </section>
     </>
       

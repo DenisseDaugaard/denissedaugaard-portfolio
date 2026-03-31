@@ -47,7 +47,7 @@ export default function Header(){
                 </ul> 
             </nav>
             <nav className="hidden lg:block">
-                <ul className="flex justify-around border border-white/20 rounded-[3rem] text-center p-4 header-small">
+                <ul className="flex justify-around border border-white/20 rounded-[3rem] text-center p-4 header-small hover:scale-105 transition-all duration-300">
                     <li>
                         <a
                             href="#home"
