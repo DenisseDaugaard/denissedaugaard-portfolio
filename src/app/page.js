@@ -9,12 +9,12 @@ import ContactForm from "./components/main/contact/ContactForm";
 
 export default function Home() {
   return (
-   <div className="wrapper relative" >
+   <div className="relative min-h-screen overflow-hidden bg-[#101114]" >
     <Header/>
     <main className="min-h-screen flex flex-col flex-1">
-      <HeroVideo children={
+      <HeroVideo>
         <TypedText/>
-        } poinerEvents="pointer-events-none"/>
+      </HeroVideo>
       <AboutMe/>
       <Projects/>
       <ContactForm/>

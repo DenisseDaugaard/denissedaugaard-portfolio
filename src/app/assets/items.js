@@ -1,98 +1,120 @@
 export const services = [
   {
-    title: "Front End",
-    description: "Modern, responsive interfaces with smooth interactions.",
+    title: "Frontend interfaces",
+    description:
+      "Responsive React and Next.js experiences with clear user flows, reusable components, and polished interaction details.",
     icon: "imgs/browser3.svg",
+    proof: "React, Next.js, Tailwind, Sass",
   },
   {
-    title: "Back End",
-    description: "Scalable systems, APIs, and reliable data handling.",
+    title: "Full-stack features",
+    description:
+      "API-connected products with authentication flows, CRUD operations, server-side logic, and reliable data handling.",
     icon: "imgs/server3.svg",
+    proof: "PHP, MySQL, Node.js, REST APIs",
   },
   {
-    title: "UI Design",
-    description: "Clean, intuitive designs focused on user experience.",
+    title: "UI design thinking",
+    description:
+      "Clean layouts, accessible visual hierarchy, and Figma-led design decisions that make products easier to use.",
     icon: "imgs/figma.svg",
+    proof: "Figma, UX structure, design systems",
+  },
+];
+
+export const techGroups = [
+  {
+    title: "Frontend",
+    items: ["HTML", "CSS", "SCSS", "Tailwind", "JavaScript", "React", "Next.js"],
+  },
+  {
+    title: "Backend",
+    items: ["PHP", "SQL", "Node.js", "REST APIs", "CRUD"],
+  },
+  {
+    title: "Design & workflow",
+    items: ["Figma", "Responsive design", "GitHub", "Deployment"],
   },
 ];
 
 export const techs = [
-    {
-        title: "HTML",
-        icon: "imgs/html.svg",
-    },
-    {
-        title: "CSS",
-        icon: "imgs/css.svg",
-    },
-    {
-        title: "SCSS",
-        icon: "imgs/scss.svg",
-    },
-    {
-        title: "tailwind",
-        icon: "imgs/tailwind.svg",
-    },
-    {
-        title: "Next.js",
-        icon: "imgs/next.svg",
-    },
-    {
-        title: "React",
-        icon: "imgs/react.svg",
-    },
-    {
-        title: " JavaScript",
-        icon: "imgs/js.svg",
-    },
-    {
-        title: "SQL",
-        icon: "imgs/sql.svg",
-    },
-    {
-        title: "PHP",
-        icon: "imgs/php2.svg",
-    },
-    {
-        title: "Figma",
-        icon: "imgs/figma.svg",
-    },
-]
+  { title: "HTML", icon: "imgs/html.svg" },
+  { title: "CSS", icon: "imgs/css.svg" },
+  { title: "SCSS", icon: "imgs/scss.svg" },
+  { title: "Tailwind", icon: "imgs/tailwind.svg" },
+  { title: "Next.js", icon: "imgs/next.svg" },
+  { title: "React", icon: "imgs/react.svg" },
+  { title: "JavaScript", icon: "imgs/js.svg" },
+  { title: "SQL", icon: "imgs/sql.svg" },
+  { title: "PHP", icon: "imgs/php2.svg" },
+  { title: "Figma", icon: "imgs/figma.svg" },
+];
+
+export const highlights = [
+  "Recently graduated web developer",
+  "Frontend and backend project experience",
+  "Based in Denmark and open to junior developer roles",
+];
 
 export const projects = [
-    {
-        title: "Biograf",
-        description: "A movie theater website with showtimes, movie data from themoviedb, and a booking system.Backend developed using PHP and MySQL for server-side logic and data management.Frontend with React and Tailwind css.",
-        imageUrl: "/projects/biograf.png",
-        logoUrl: "/projects/biograf.svg",
-        href: "https://biograf-denissedaugaard.onrender.com"
-    },
-    {
-        title: "HiFi Horizon",
-        description: "A web-application for high-end audio equipment. Features product listings, shopping cart, and checkout.Back end boiuld with Node.js + Express-style + json-server. Front end built with Vite and Tailwind CSS.",
-        imageUrl: "/projects/hifi.png",
-         logoUrl: "/projects/hifi.svg",
-         href: "https://hifi-project.onrender.com"
-    },
-    {
-        title: "Landrup Dance",
-        description: "A mobile web-application for a dance school. Features class schedules, instructos, and online registration. Front end built with Next.js and Tailwind CSS. The application follows a RESTful architecture, enabling full CRUD functionality through HTTP methods such as GET, POST, PATCH, and DELETE.",
-        imageUrl: "/projects/landrup.png",
-        logoUrl: "/projects/landrup.svg",
-         href: "https://github.com/rts-cmk-wu13/landrup-dans-DenisseDaugaard/tree/dev"
-    },
-    {
-        title: "Newsify",
-        description: "A mobile web-application for news articles, data from The New York Times Api. Features news categories, article details. Front end built with Vite and SASS CSS.",
-        imageUrl: "/projects/newsify.png",
-        logoUrl: "/projects/newsify.svg",
-         href: "https://newsifyappdenisse.netlify.app/"
-    },
-    {
-        title: "Din Mægler",
-        description: "A real estate website with property listings, search functionality, and contact forms. Front end built with React + Vite and Tailwind CSS.",
-        imageUrl: "/projects/dinmægler.png",
-        logoUrl: "/projects/dinmægler.svg",
-         href: "https://github.com/rts-cmk-wu13/dinmaegler-DenisseDaugaard/tree/dev"
-    },
-    ]
+  {
+    title: "Biograf",
+    summary:
+      "Cinema booking platform with showtimes, movie data, and reservation flows.",
+    description:
+      "Built a full-stack movie theater website using The Movie Database content, PHP and MySQL backend logic, and a React/Tailwind frontend for browsing and booking.",
+    stack: ["React", "Tailwind", "PHP", "MySQL", "TMDB API"],
+    role: "Full-stack development",
+    impact: "Connected real movie data with a working booking experience.",
+    logoUrl: "/projects/biograf.svg",
+    href: "https://biograf-denissedaugaard.onrender.com",
+  },
+  {
+    title: "HiFi Horizon",
+    summary:
+      "E-commerce experience for high-end audio equipment with cart and checkout.",
+    description:
+      "Created product listing, basket, and checkout flows backed by a Node.js style API and json-server data layer, with a fast Vite/Tailwind frontend.",
+    stack: ["Vite", "Tailwind", "Node.js", "json-server"],
+    role: "Frontend and data flow",
+    impact: "Designed a complete shopping journey from product discovery to checkout.",
+    logoUrl: "/projects/hifi.svg",
+    href: "https://hifi-project.onrender.com",
+  },
+  {
+    title: "Landrup Dance",
+    summary:
+      "Mobile-first dance school app with class schedules and registration.",
+    description:
+      "Developed a Next.js application using RESTful architecture and full CRUD methods for schedules, instructors, user registration, and class interactions.",
+    stack: ["Next.js", "Tailwind", "REST", "CRUD"],
+    role: "Application development",
+    impact: "Focused on mobile usability and structured data interactions.",
+    logoUrl: "/projects/landrup.svg",
+    href: "https://github.com/rts-cmk-wu13/landrup-dans-DenisseDaugaard/tree/dev",
+  },
+  {
+    title: "Newsify",
+    summary:
+      "News reading app powered by The New York Times API.",
+    description:
+      "Built a category-based article browser with detail pages, API data fetching, and a Sass-styled Vite frontend.",
+    stack: ["Vite", "Sass", "JavaScript", "NYT API"],
+    role: "Frontend development",
+    impact: "Turned external API content into a simple, readable news product.",
+    logoUrl: "/projects/newsify.svg",
+    href: "https://newsifyappdenisse.netlify.app/",
+  },
+  {
+    title: "Din Maegler",
+    summary:
+      "Real estate website with property listings, search, and contact flows.",
+    description:
+      "Created a React/Vite property browsing experience with Tailwind styling, search-oriented structure, and conversion-focused contact areas.",
+    stack: ["React", "Vite", "Tailwind"],
+    role: "Frontend development",
+    impact: "Practiced practical UI patterns for browsing, filtering, and lead capture.",
+    logoUrl: "/projects/dinmægler.svg",
+    href: "https://github.com/rts-cmk-wu13/dinmaegler-DenisseDaugaard/tree/dev",
+  },
+];

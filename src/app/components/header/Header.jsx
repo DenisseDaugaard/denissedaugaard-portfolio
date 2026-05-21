@@ -3,85 +3,52 @@ import logo from "@/app/assets/logo.png"
 import denisse from "@/app/assets/denisse.png"
 
 export default function Header(){
+    const links = [
+        { href: "#home", label: "Home" },
+        { href: "#skills", label: "Skills" },
+        { href: "#projects", label: "Projects" },
+        { href: "#contact", label: "Contact" },
+    ]
+
     return(
-   <header className="header-enter absolute z-50 w-full lg:rounded-full top-12 lg:top-6
-    p-2 backdrop-blur-md
-    lg:bg-[linear-gradient(0deg,rgba(156,86,153,0.44)_0%,rgba(127,156,173,0.49)_100%)]">
-        <div className="grid grid-cols-3 items-center">
-            <section>
+   <header className="fixed left-0 right-0 top-0 z-50 px-4 py-4">
+        <div className="mx-auto flex max-w-6xl items-center justify-between rounded-lg border border-white/15 bg-[#11151d]/80 px-4 py-3 shadow-2xl shadow-black/20 backdrop-blur-xl">
+            <a href="#home" className="flex items-center gap-3">
                 <Image
                 src={logo}
-                width={80}
-                height={80}
+                width={48}
+                height={48}
                 unoptimized
-                alt="Denisse Daugard porfolio image"
-                className="drop-shadow-[0_5px_20px_rgba(59,130,246)] bg-blur white/10"
+                alt="Denisse Daugaard logo"
+                className="h-11 w-11 object-contain"
                 />
-            </section>
-            <nav className="mx-auto lg:hidden">
-                <ul className="flex flex-col">
-                    <li>
-                        <a
-                            href="#home"
-                            className="inline-block transition duration-300 hover:scale-105 hover:text-red-300 hover:drop-shadow-[0_0_15px_rgba(236,72,153,0.6)]"
-                        >
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="#projects"
-                            className="inline-block transition duration-300 hover:scale-105 hover:text-red-300 hover:drop-shadow-[0_0_15px_rgba(236,72,153,0.6)]"
-                        >
-                            Projects
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="#contact"
-                            className="inline-block transition duration-300 hover:scale-105 hover:text-red-300 hover:drop-shadow-[0_0_15px_rgba(236,72,153,0.6)]"
-                        >
-                            Contact
-                        </a>
-                    </li>
+                <span className="hidden text-sm font-bold text-white sm:block">
+                    Denisse Daugaard
+                </span>
+            </a>
+
+            <nav aria-label="Main navigation">
+                <ul className="flex items-center gap-1 text-sm text-white/76 sm:gap-3">
+                    {links.map((link) => (
+                        <li key={link.href}>
+                            <a
+                                href={link.href}
+                                className="rounded-lg px-2 py-2 transition hover:bg-white/10 hover:text-white sm:px-3"
+                            >
+                                {link.label}
+                            </a>
+                        </li>
+                    ))}
                 </ul> 
             </nav>
-            <nav className="hidden lg:block">
-                <ul className="flex justify-around border border-white/20 rounded-[3rem] text-center p-4 header-small hover:scale-105 transition-all duration-300">
-                    <li>
-                        <a
-                            href="#home"
-                            className="inline-block transition duration-300 hover:scale-105 hover:text-red-300 hover:drop-shadow-[0_0_15px_rgba(236,72,153,0.6)]"
-                        >
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="#projects"
-                            className="inline-block transition duration-300 hover:scale-105 hover:text-red-300 hover:drop-shadow-[0_0_15px_rgba(236,72,153,0.6)]"
-                        >
-                            Projects
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            href="#contact"
-                            className="inline-block transition duration-300 hover:scale-105 hover:text-red-300 hover:drop-shadow-[0_0_15px_rgba(236,72,153,0.6)]"
-                        >
-                            Contact
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <figure className="flex justify-end items-center mr-4">
+            <figure className="hidden items-center justify-end sm:flex">
                 <Image
                     src={denisse}
                     alt="Denisse Daugaard Portfolio Picture"
-                    width={70}
-                    height={70}
+                    width={48}
+                    height={48}
                     unoptimized
-                    className="rounded-full"
+                    className="h-11 w-11 rounded-full object-cover ring-2 ring-cyan-200/40"
                 />
             </figure>
         </div>

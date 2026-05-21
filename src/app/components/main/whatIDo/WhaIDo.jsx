@@ -1,49 +1,70 @@
-"use client"
-
-import { services } from "@/app/assets/items"
-import React from 'react';
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import { Navigation } from 'swiper/modules';
+import Image from "next/image";
+import { highlights, services } from "@/app/assets/items";
 import TechStak from "./TechStak";
 import Resume from "./Resume";
 
-export default function AboutMe(){
-    return(
-         <section id="home" className="content-enter shadow-lg shadow-cyan-900 lg:shadow-none lg:bg-transparent lg:w-[70%] backdrop-blur-2xl lg:rounded-[2rem] lg:border border-pink-500/50 p-4 lg:mx-auto">
-            <Swiper navigation={true} modules={[Navigation]} loop={true} className="mySwiper">
-                <SwiperSlide>
-                    <h1 className="text-2xl font-semibold text-center my-10">What I do ⚙️</h1>
-                    <div className="px-10 lg:flex justify-around mb-8 gap-8">
-                        {services.map((service) => (
-                                <section key={service.title} className="flex flex-col items-center text-center bg-white/20 border border-white/20 rounded-lg py-2 lg:py-6 px-4">
-                                <img
-                                    src={service.icon}
-                                    alt={service.title}
-                                    className="mb-4 h-16 w-16 object-contain"
-                                />
-                                <h3 className="mb-2 text-xl font-bold text-red-400 uppercase">
-                                    {service.title}
-                                </h3>
-                                <p className="max-w-[220px] text-base text-white/90">
-                                    {service.description}
-                                </p>
-                                </section>
-                        ))}
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <TechStak/>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Resume/>
-                </SwiperSlide>
-                
-            </Swiper>
-        </section>
-    )
-}
+export default function AboutMe() {
+  return (
+    <section
+      id="skills"
+      className="mx-auto w-full max-w-6xl px-6 py-20 lg:px-8"
+    >
+      <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+        <div>
+          <p className="text-sm font-bold uppercase tracking-[0.18em] text-cyan-300">
+            Skills with proof
+          </p>
+          <h2 className="mt-4 text-3xl font-bold text-white sm:text-5xl">
+            A developer profile built around usable products.
+          </h2>
+          <p className="mt-5 text-lg leading-8 text-white/70">
+            I combine frontend implementation, backend understanding, and design structure to build websites and applications that are easy to understand, use, and maintain.
+          </p>
+          <ul className="mt-8 space-y-3">
+            {highlights.map((highlight) => (
+              <li
+                key={highlight}
+                className="rounded-lg border border-white/10 bg-white/[0.04] px-4 py-3 text-white/82"
+              >
+                {highlight}
+              </li>
+            ))}
+          </ul>
+        </div>
 
+        <div className="grid gap-4">
+          {services.map((service) => (
+            <article
+              key={service.title}
+              className="rounded-lg border border-white/10 bg-white/[0.05] p-5 transition hover:border-cyan-200/40 hover:bg-white/[0.08]"
+            >
+              <div className="flex gap-4">
+                <Image
+                  src={`/${service.icon}`}
+                  alt=""
+                  width={56}
+                  height={56}
+                  className="h-12 w-12 shrink-0 object-contain"
+                />
+                <div>
+                  <h3 className="text-xl font-bold text-white">
+                    {service.title}
+                  </h3>
+                  <p className="mt-2 leading-7 text-white/70">
+                    {service.description}
+                  </p>
+                  <p className="mt-4 text-sm font-semibold text-pink-200">
+                    {service.proof}
+                  </p>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+
+      <TechStak />
+      <Resume />
+    </section>
+  );
+}

@@ -1,32 +1,49 @@
-import Image from "next/image"
-import { FaCloudDownloadAlt } from "react-icons/fa";
-import { FaEye } from "react-icons/fa";
-export default function Resume() {
-    return(
-        <section className="flex flex-col justify-center items-center gap-8 lg:gap-0 lg:grid grid-cols-2 w-10/12 mx-auto my-10">
-            <section className="text-center lg:text-left">
-                <h1 className="text-2xl font-semibold mb-4">My Resume 📄</h1>
-                <p className="text-xl leading-8">Freshly graduated web developer with a focus on modern frontend and backend technologies.
-                   I am looking for a position where I can develop my skills and
-                    contribute to the development of modern digital solutions.</p>
-            </section>
-            <div className="flex flex-col justify-self-center items-center gap-6">
+import Image from "next/image";
+import { FaCloudDownloadAlt, FaEye } from "react-icons/fa";
 
-                <Image 
-                src="/portfolio/cv.png" 
-                alt="resume" width={200} 
-                height={300} 
-                unoptimized
-                className="rounded-lg shadow-lg brightness-85"/>
-                <div className="flex gap-4 items-center">
-                    <a href="/portfolio/Denisse_Daugaard_CV.pdf" download className="bg-sky-500 hover:bg-sky-700 inline-block px-4 py-2 rounded">
-                        <FaCloudDownloadAlt size={20} />
-                    </a>
-                    <a href="/portfolio/Denisse_Daugaard_CV.pdf" target="_blank" className="bg-sky-500 hover:bg-sky-700 inline-block px-4 py-2 rounded">
-                        <FaEye size={20} />
-                    </a>
-                </div>
-            </div>
-        </section>
-    )
+export default function Resume() {
+  return (
+    <section className="mt-20 grid gap-8 rounded-lg border border-white/10 bg-white/[0.04] p-6 lg:grid-cols-[1fr_280px] lg:items-center lg:p-8">
+      <section>
+        <p className="text-sm font-bold uppercase tracking-[0.18em] text-pink-200">
+          Resume
+        </p>
+        <h2 className="mt-3 text-3xl font-bold text-white">
+          Ready for a junior web developer role
+        </h2>
+        <p className="mt-5 max-w-3xl text-lg leading-8 text-white/70">
+          Freshly graduated web developer focused on modern frontend and backend technologies. I am looking for a position where I can keep developing my skills and contribute to practical digital solutions.
+        </p>
+      </section>
+
+      <div className="flex flex-col items-center gap-5 lg:justify-self-end">
+        <Image
+          src="/portfolio/cv.png"
+          alt="Resume preview"
+          width={200}
+          height={300}
+          unoptimized
+          className="rounded-lg shadow-lg brightness-90"
+        />
+        <div className="flex gap-4">
+          <a
+            href="/portfolio/Denisse_Daugaard_CV.pdf"
+            download
+            className="inline-flex items-center justify-center rounded-lg bg-cyan-300 px-4 py-3 text-slate-950 transition hover:bg-white"
+            aria-label="Download CV"
+          >
+            <FaCloudDownloadAlt size={20} />
+          </a>
+          <a
+            href="/portfolio/Denisse_Daugaard_CV.pdf"
+            target="_blank"
+            className="inline-flex items-center justify-center rounded-lg border border-white/20 px-4 py-3 text-white transition hover:border-cyan-200 hover:text-cyan-100"
+            aria-label="View CV"
+          >
+            <FaEye size={20} />
+          </a>
+        </div>
+      </div>
+    </section>
+  );
 }
